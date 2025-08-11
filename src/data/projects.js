@@ -19,7 +19,7 @@ export const projects = [
     description: "Real-time collaborative notes using Socket.IO and WebRTC.",
     tech: ["React", "Node.js", "Socket.IO", "WebRTC"],
     liveLink: "https://collaborative-notes-1eyv.onrender.com/",
-    codeLink: "https://github.com/musharraf10/collaborative-notes",
+    codeLink: "https://github.com/musharraf10/Collaborative_Notes",
   },
   {
     title: "Zoom Clone",
