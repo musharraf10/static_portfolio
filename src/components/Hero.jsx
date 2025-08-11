@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 import { useSpring, animated } from 'react-spring';
+import HeroName from './HeroName';
 
 function Hero() {
   const fadeIn = useSpring({
@@ -19,7 +20,7 @@ function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-16">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20"></div>
-      
+
       <div className="relative z-10 max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -28,21 +29,21 @@ function Hero() {
           className="mb-8"
         >
           <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-secondary p-1">
-            <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-              <span className="text-4xl font-bold text-primary">SM</span>
+            <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
+              <img
+                src="/ProfilePhoto.jpg"
+                alt="Shaik Musharaf"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </motion.div>
 
-        <motion.h1 
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
-        >
-          Hi, I'm Shaik Musharaf
-        </motion.h1>
-        
+
+        <HeroName />
+
+
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

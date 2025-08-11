@@ -47,7 +47,7 @@ function FloatingCube() {
 
 function Scene3D() {
   return (
-    <div className="fixed inset-0 -z-10">
+    <div className="fixed inset-0 -z-100">
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Stars />
         <FloatingCube />

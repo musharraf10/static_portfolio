@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   :root {
@@ -101,17 +101,37 @@
   }
 
   /* Gradient text animation */
-  @keyframes gradient {
-    0%, 100% {
+  @keyframes gradient-move {
+    0% {
       background-position: 0% 50%;
     }
-    50% {
+    40% {
       background-position: 100% 50%;
-    }
+    } /* animate for ~40% of time */
+    100% {
+      background-position: 0% 50%;
+    } /* rest is pause/reset */
   }
 
   .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient 3s ease infinite;
+    background-size: 300% 300%;
+    animation: gradient-move 5s ease-in-out infinite; /* 5s cycle */
+  }
+
+  @keyframes blink {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    display: inline-block;
+    animation: blink 1s infinite;
   }
 }
