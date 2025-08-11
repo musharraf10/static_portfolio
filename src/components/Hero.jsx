@@ -1,20 +1,110 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+import { useSpring, animated } from 'react-spring';
 
 function Hero() {
+  const fadeIn = useSpring({
+    from: { opacity: 0, transform: 'translateY(50px)' },
+    to: { opacity: 1, transform: 'translateY(0px)' },
+    delay: 500,
+  });
+
+  const socialLinks = [
+    { icon: Github, href: 'https://github.com/musharraf10', label: 'GitHub' },
+    { icon: Linkedin, href: 'http://www.linkedin.com/in/skmusharaf01', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:skmusharaf01@gmail.com', label: 'Email' }
+  ];
+
   return (
-    <section className="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-      <motion.h1 
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-4xl md:text-6xl font-bold mb-4"
+    <section className="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-16">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20"></div>
+      
+      <div className="relative z-10 max-w-4xl mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mb-8"
+        >
+          <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-secondary p-1">
+            <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
+              <span className="text-4xl font-bold text-primary">SM</span>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.h1 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
+        >
+          Hi, I'm Shaik Musharaf
+        </motion.h1>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="mb-8"
+        >
+          <p className="text-xl md:text-3xl text-muted-foreground mb-4">
+            Full-stack Developer
+          </p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            AI & Prompt Engineer | MERN Stack Specialist | Creating Digital Experiences
+          </p>
+        </motion.div>
+
+        <animated.div style={fadeIn} className="flex justify-center space-x-6 mb-12">
+          {socialLinks.map(({ icon: Icon, href, label }) => (
+            <motion.a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 rounded-full bg-accent/20 hover:bg-accent/40 transition-all duration-300 group"
+            >
+              <Icon className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
+            </motion.a>
+          ))}
+        </animated.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <motion.a
+            href="#projects"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            View My Work
+          </motion.a>
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+          >
+            Get In Touch
+          </motion.a>
+        </motion.div>
+      </div>
+
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        Hi, I'm Shaik Musharaf
-      </motion.h1>
-      <p className="text-lg md:text-2xl max-w-2xl">
-        Full-stack Developer | AI & Prompt Engineer
-      </p>
+        <ChevronDown className="w-8 h-8 text-muted-foreground" />
+      </motion.div>
     </section>
   );
 }
