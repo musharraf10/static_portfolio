@@ -21,13 +21,13 @@ function Footer() {
             <span className="text-muted-foreground">and lots of</span>
             <Coffee className="w-4 h-4 text-amber-600" />
           </div>
-          
+
           <p className="text-muted-foreground mb-2">
             © {new Date().getFullYear()} Shaik Musharaf. All rights reserved.
           </p>
-          
+
           <p className="text-sm text-muted-foreground">
-            Built with React, Tailwind CSS, Framer Motion, and Three.js
+            Thanks for visiting my portfolio! Feel free to connect with me on social media or reach out via email.
           </p>
         </motion.div>
       </div>

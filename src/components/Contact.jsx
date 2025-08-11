@@ -81,7 +81,7 @@ function Contact() {
               Get In Touch
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              I'm always open to discussing new opportunities, interesting projects, 
+              I'm always open to discussing new opportunities, interesting projects,
               or just having a chat about technology and innovation.
             </p>
           </div>

@@ -17,16 +17,18 @@ function App() {
     <ThemeProvider>
       <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
         <Scene3D />
-        <ThemeToggle />
-        <Navbar />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Achievements />
-        <Contact />
-        <Footer />
+        <main className="relative z-10">
+          <ThemeToggle />
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Achievements />
+          <Contact />
+          <Footer />
+        </main>
       </div>
     </ThemeProvider>
   );

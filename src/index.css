@@ -1,7 +1,29 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Syne:wght@700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root {
+  --font-heading: "Syne", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+}
+
+/* The rest of your code applies the fonts automatically */
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* 1. Define all your color variables inside the base layer */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -70,68 +92,71 @@
     --ring: 173 80% 40%;
   }
 
-  * {
-    @apply border-border;
-  }
-
+  /* 2. Move body and other rules that use @apply outside the layer */
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
+  * {
+    @apply border-border;
+  }
+
   html {
     scroll-behavior: smooth;
   }
+}
 
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
+/* 3. Keep other custom styles and animations here */
 
-  ::-webkit-scrollbar-track {
-    @apply bg-background;
-  }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
-  ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/30 rounded-full;
-  }
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/50;
-  }
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
 
-  /* Gradient text animation */
-  @keyframes gradient-move {
-    0% {
-      background-position: 0% 50%;
-    }
-    40% {
-      background-position: 100% 50%;
-    } /* animate for ~40% of time */
-    100% {
-      background-position: 0% 50%;
-    } /* rest is pause/reset */
-  }
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
 
-  .animate-gradient {
-    background-size: 300% 300%;
-    animation: gradient-move 5s ease-in-out infinite; /* 5s cycle */
+/* Gradient text animation */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
   }
+  40% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-  @keyframes blink {
-    0%,
-    50%,
-    100% {
-      opacity: 1;
-    }
-    25%,
-    75% {
-      opacity: 0;
-    }
-  }
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradient-move 5s ease-in-out infinite;
+}
 
-  .animate-blink {
-    display: inline-block;
-    animation: blink 1s infinite;
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
   }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  display: inline-block;
+  animation: blink 1s infinite;
 }
