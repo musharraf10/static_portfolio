@@ -56,7 +56,6 @@ function ContactForm() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-4 sm:space-y-6"
         >
             <div>
                 <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
@@ -69,7 +68,7 @@ function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground"
                     placeholder="Your full name"
                 />
             </div>
@@ -85,7 +84,7 @@ function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground"
                     placeholder="your.email@example.com"
                 />
             </div>
@@ -99,8 +98,8 @@ function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={4}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground resize-none text-sm sm:text-base"
+                    rows={6}
+                    className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground resize-none"
                     placeholder="Tell me about your project or just say hello!"
                 />
             </div>
@@ -110,7 +109,7 @@ function ContactForm() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={isSending}
-                className="w-full flex items-center justify-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl text-sm sm:text-base"
+                className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
             >
                 <Send className="w-5 h-5" />
                 <span>{isSending ? "Sending..." : "Send Message"}</span>
@@ -118,7 +117,7 @@ function ContactForm() {
 
             {/* Status Message */}
             {status && (
-                <p className="text-sm text-muted-foreground mt-2 text-center">{status}</p>
+                <p className="text-sm text-muted-foreground mt-2">{status}</p>
             )}
         </motion.form>
     );

@@ -35,23 +35,23 @@ function Achievements() {
   ];
 
   return (
-    <section id="achievements" className="py-12 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+    <section id="achievements" className="py-20 px-6 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-center mb-8 sm:mb-16"
+        className="text-center mb-16"
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent px-4">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Achievements & Milestones
         </h2>
-        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Key accomplishments that showcase my dedication to excellence and continuous growth
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-4">
+      <div className="grid md:grid-cols-2 gap-8">
         {achievements.map((achievement, index) => (
           <motion.div
             key={index}
@@ -62,17 +62,17 @@ function Achievements() {
             whileHover={{ y: -5 }}
             className="relative group"
           >
-            <div className="p-4 sm:p-6 lg:p-8 bg-card border border-border rounded-2xl hover:shadow-xl transition-all duration-300 h-full">
+            <div className="p-8 bg-card border border-border rounded-2xl hover:shadow-xl transition-all duration-300 h-full">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
-                  <achievement.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  <achievement.icon className="w-8 h-8 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
-                    <h3 className="text-lg sm:text-xl font-bold text-card-foreground">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-bold text-card-foreground">
                       {achievement.title}
                     </h3>
-                    <span className="text-xs text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full self-start sm:self-auto">
+                    <span className="text-xs text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full">
                       {achievement.highlight}
                     </span>
                   </div>
@@ -82,7 +82,7 @@ function Achievements() {
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {achievement.description}
               </p>
 
