@@ -15,9 +15,9 @@ import Footer from './components/Footer';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <div className="min-h-screen w-full max-w-full min-w-full bg-background text-foreground transition-colors duration-300 box-border">
         <Scene3D />
-        <main className="relative z-10">
+        <main className="w-full max-w-full min-w-full">
           <ThemeToggle />
           <Navbar />
           <Hero />
