@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, MapPin, Phone, Send } from 'lucide-react';
 import { useState } from 'react';
@@ -136,65 +137,7 @@ function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground"
-                placeholder="Your full name"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground"
-                placeholder="your.email@example.com"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-card-foreground mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground resize-none"
-                placeholder="Tell me about your project or just say hello!"
-              />
-            </div>
-
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
-            >
-              <Send className="w-5 h-5" />
-              <span>Send Message</span>
-            </motion.button>
-          </form>
+          <ContactForm />
         </motion.div>
       </div>
     </section>
