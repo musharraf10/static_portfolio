@@ -31,7 +31,8 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 max-w-7xl mx-auto bg-accent/5">
+    <section id="skills" className="w-full py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
+      <div className="max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -39,15 +40,15 @@ function Skills() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Skills & Technologies
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
           A comprehensive toolkit for building modern, scalable applications
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         {skillCategories.map((category, categoryIndex) => (
           <motion.div
             key={category.title}
@@ -55,9 +56,9 @@ function Skills() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
             viewport={{ once: true }}
-            className="space-y-4"
+              className="space-y-4 w-full"
           >
-            <h3 className="text-xl font-semibold text-primary mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-primary mb-4">
               {category.title}
             </h3>
             <div className="space-y-3">
@@ -69,9 +70,9 @@ function Skills() {
                   transition={{ duration: 0.4, delay: (categoryIndex * 0.1) + (index * 0.05) }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05, x: 10 }}
-                  className="p-3 bg-card border border-border rounded-lg hover:shadow-md transition-all duration-300 cursor-pointer group"
+                    className="p-2 sm:p-3 bg-card border border-border rounded-lg hover:shadow-md transition-all duration-300 cursor-pointer group w-full"
                 >
-                  <span className="text-card-foreground group-hover:text-primary transition-colors">
+                    <span className="text-sm sm:text-base text-card-foreground group-hover:text-primary transition-colors">
                     {skill}
                   </span>
                 </motion.div>
@@ -79,6 +80,7 @@ function Skills() {
             </div>
           </motion.div>
         ))}
+      </div>
       </div>
     </section>
   );
