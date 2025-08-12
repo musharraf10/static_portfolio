@@ -137,7 +137,9 @@ function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <ContactForm />
+          <div className="space-y-6">
+            <ContactForm />
+          </div>
         </motion.div>
       </div>
     </section>
