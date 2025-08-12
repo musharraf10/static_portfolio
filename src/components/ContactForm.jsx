@@ -52,7 +52,6 @@ function ContactForm() {
     return (
         <motion.form
             onSubmit={handleSubmit}
-            className="space-y-6"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
