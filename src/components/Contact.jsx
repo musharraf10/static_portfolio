@@ -26,8 +26,8 @@ function Contact() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 00000000',
-      href: 'tel:+919182399196',
+      value: '+91 -',
+      href: 'tel:+911234567890',
     },
     {
       icon: MapPin,
@@ -40,39 +40,40 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="py-12 px-2 sm:px-4 bg-accent/5 w-full min-w-full max-w-full box-border"
+      className="py-16 px-4 bg-accent/5 w-full min-w-full box-border"
     >
-      <div className="w-full max-w-full mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Let's Connect & Learn Together
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-full mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             I'm a passionate fresher eager to start my career in software development.
             Open to internships, entry-level roles, and collaborative learning
             opportunities where I can grow while contributing meaningfully.
           </p>
         </motion.div>
 
-        <div className="flex flex-col gap-6 w-full max-w-full">
+        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 w-full">
+          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="w-full max-w-full space-y-6"
+            className="space-y-8 w-full"
           >
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-card-foreground">
+              <h3 className="text-2xl font-bold mb-6 text-card-foreground">
                 Get In Touch
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6 text-sm sm:text-base">
+              <p className="text-muted-foreground leading-relaxed mb-8 text-base sm:text-lg">
                 As a fresher, I'm enthusiastic about learning new technologies,
                 working on real-world projects, and contributing to a team. If you
                 have an internship, entry-level opportunity, or even a project I can
@@ -80,7 +81,7 @@ function Contact() {
               </p>
             </div>
 
-            <div className="space-y-4 w-full max-w-full">
+            <div className="space-y-6 w-full">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={index}
@@ -88,24 +89,24 @@ function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-start space-x-3 group w-full max-w-full"
+                  className="flex items-start space-x-4 group"
                 >
-                  <div className="p-2 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300 flex-shrink-0">
-                    <info.icon className="w-5 h-5 text-primary" />
+                  <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300 flex-shrink-0">
+                    <info.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="min-w-0 break-words">
-                    <p className="text-xs sm:text-sm text-muted-foreground">{info.label}</p>
+                    <p className="text-sm text-muted-foreground">{info.label}</p>
                     {info.href ? (
                       <a
                         href={info.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-card-foreground hover:text-primary transition-colors duration-300 font-medium break-words text-sm sm:text-base"
+                        className="text-card-foreground hover:text-primary transition-colors duration-300 font-medium break-words"
                       >
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-card-foreground font-medium break-words text-sm sm:text-base">
+                      <p className="text-card-foreground font-medium break-words">
                         {info.value}
                       </p>
                     )}
@@ -115,12 +116,13 @@ function Contact() {
             </div>
           </motion.div>
 
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="w-full max-w-full"
+            className="w-full"
           >
             <ContactForm />
           </motion.div>
@@ -131,3 +133,4 @@ function Contact() {
 }
 
 export default Contact;
+//Og

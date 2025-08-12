@@ -29,27 +29,24 @@ function Experience() {
   ];
 
   return (
-    <section
-      id="experience"
-      className="py-12 px-2 sm:px-4 bg-accent/5 w-full min-w-full max-w-full box-border"
-    >
-      <div className="w-full max-w-full mx-auto">
+    <section id="experience" className="py-20 px-4 sm:px-6 bg-accent/5 min-w-full">
+      <div className="max-w-7xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Professional Experience
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-full mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Building expertise through diverse roles and challenging projects
           </p>
         </motion.div>
 
-        <div className="space-y-8 w-full max-w-full">
+        <div className="space-y-12">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -57,33 +54,33 @@ function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="w-full max-w-full"
+              className="relative"
             >
-              <div className="flex flex-col gap-4 w-full max-w-full">
+              <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
                 {/* Left Section */}
-                <div className="w-full max-w-full">
-                  <div className="w-full max-w-full">
-                    <div className="flex items-start space-x-2 mb-3">
-                      <div className="p-2 bg-primary/10 rounded-full flex-shrink-0">
-                        <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                <div className="w-full lg:w-1/3">
+                  <div className="lg:sticky lg:top-24">
+                    <div className="flex items-start sm:items-center space-x-3 mb-4">
+                      <div className="p-2 sm:p-3 bg-primary/10 rounded-full">
+                        <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                       </div>
-                      <div className="w-full max-w-full">
-                        <h3 className="text-base sm:text-lg font-bold text-card-foreground">
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-card-foreground">
                           {exp.title}
                         </h3>
-                        <p className="text-primary font-semibold text-xs sm:text-sm">
+                        <p className="text-primary font-semibold text-sm sm:text-base">
                           {exp.company}
                         </p>
                       </div>
                     </div>
 
-                    <div className="space-y-1 text-xs text-muted-foreground">
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="w-3 h-3" />
+                    <div className="space-y-2 text-xs sm:text-sm text-muted-foreground">
+                      <div className="flex items-center space-x-2">
+                        <Calendar className="w-4 h-4" />
                         <span>{exp.period}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
-                        <MapPin className="w-3 h-3" />
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="w-4 h-4" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
@@ -91,9 +88,9 @@ function Experience() {
                 </div>
 
                 {/* Right Section */}
-                <div className="w-full max-w-full">
-                  <div className="p-3 sm:p-4 bg-card border border-border rounded-md hover:shadow-md transition-all duration-200">
-                    <ul className="space-y-2">
+                <div className="w-full lg:w-2/3">
+                  <div className="p-4 sm:p-6 bg-card border border-border rounded-2xl hover:shadow-lg transition-all duration-300">
+                    <ul className="space-y-3">
                       {exp.description.map((item, itemIndex) => (
                         <motion.li
                           key={itemIndex}
@@ -104,10 +101,10 @@ function Experience() {
                             delay: (index * 0.1) + (itemIndex * 0.1),
                           }}
                           viewport={{ once: true }}
-                          className="flex items-start space-x-2 text-muted-foreground"
+                          className="flex items-start space-x-3 text-muted-foreground"
                         >
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
-                          <span className="text-xs sm:text-sm">{item}</span>
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-sm sm:text-base">{item}</span>
                         </motion.li>
                       ))}
                     </ul>
