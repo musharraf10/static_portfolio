@@ -34,7 +34,7 @@ export default function HeroName() {
     }, [displayedText, isDeleting, loopIndex, typingSpeed]);
 
     return (
-        <h1 className="text-3xl md:text-6xl font-bold mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-6xl font-bold mb-6 px-4">
             {displayedText}
             <span className="animate-blink">|</span>
         </h1>

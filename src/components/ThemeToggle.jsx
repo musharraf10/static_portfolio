@@ -12,7 +12,7 @@ function ThemeToggle() {
   ];
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex gap-2 bg-white/10 backdrop-blur-md rounded-full p-2 border border-white/20">
+    <div className="fixed bottom-4 right-4 z-50 flex gap-1 sm:gap-2 bg-white/10 backdrop-blur-md rounded-full p-1 sm:p-2 border border-white/20">
       {themes.map(({ name, icon: Icon, color }) => (
         <button
           key={name}
@@ -22,7 +22,7 @@ function ThemeToggle() {
             : 'hover:bg-white/10'
             }`}
         >
-          <Icon className={`w-5 h-5 ${color}`} />
+          <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${color}`} />
         </button>
       ))}
     </div>
