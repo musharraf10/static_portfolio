@@ -17,7 +17,7 @@ function App() {
     <ThemeProvider>
       <div className="min-h-screen w-full max-w-full min-w-full bg-background text-foreground transition-colors duration-300 box-border">
         <Scene3D />
-        <main className="w-full max-w-full min-w-full">
+        <main className="w-full max-w-full min-w-full z-10 relative">
           <ThemeToggle />
           <Navbar />
           <Hero />
