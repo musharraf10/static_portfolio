@@ -8,7 +8,7 @@ function Experience() {
       title: 'Freelance AI & Prompt Engineer',
       company: 'Outlier / Scale AI',
       period: 'Jan 2025 – Present',
-      location: 'Remote',
+      location: 'Remote/Part-time',
       description: [
         'LLM prompt-engineering, fine-tuning, evaluation & data preprocessing',
         'Developed prompts for Python, React/JS, HTML/CSS, and troubleshooting UI issues',
@@ -71,7 +71,7 @@ function Experience() {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <div className="flex items-center space-x-2">
                       <Calendar className="w-4 h-4" />
@@ -84,7 +84,7 @@ function Experience() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="lg:w-2/3">
                 <div className="p-6 bg-card border border-border rounded-2xl hover:shadow-lg transition-all duration-300">
                   <ul className="space-y-3">

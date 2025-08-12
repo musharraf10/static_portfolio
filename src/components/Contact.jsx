@@ -30,11 +30,17 @@ function Contact() {
       href: 'http://www.linkedin.com/in/skmusharaf01'
     },
     {
+      icon: Phone,
+      label: 'Phone',
+      value: '+91 -',
+      href: 'tel:+911234567890'
+    },
+    {
       icon: MapPin,
-      label: 'Location',
-      value: 'Available for Remote Work',
+      label: 'Status',
+      value: 'Open to Internships & Entry-Level Roles (Remote or On-site)',
       href: null
-    }
+    },
   ];
 
   const handleSubmit = (e) => {
@@ -60,10 +66,12 @@ function Contact() {
         className="text-center mb-16"
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          Let's Work Together
+          Let's Connect & Learn Together
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
+          I'm a passionate fresher eager to start my career in software development.
+          Open to internships, entry-level roles, and collaborative learning
+          opportunities where I can grow while contributing meaningfully.
         </p>
       </motion.div>
 
@@ -81,8 +89,10 @@ function Contact() {
               Get In Touch
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              I'm always open to discussing new opportunities, interesting projects,
-              or just having a chat about technology and innovation.
+              As a fresher, I'm enthusiastic about learning new technologies, working on
+              real-world projects, and contributing to a team. If you have an internship,
+              entry-level opportunity, or even a project I can collaborate on, I'd love
+              to hear from you.
             </p>
           </div>
 

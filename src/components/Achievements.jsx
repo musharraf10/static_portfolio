@@ -72,7 +72,7 @@ function Achievements() {
                     <h3 className="text-xl font-bold text-card-foreground">
                       {achievement.title}
                     </h3>
-                    <span className="text-sm text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full">
+                    <span className="text-xs text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full">
                       {achievement.highlight}
                     </span>
                   </div>
@@ -81,11 +81,11 @@ function Achievements() {
                   </p>
                 </div>
               </div>
-              
+
               <p className="text-muted-foreground leading-relaxed">
                 {achievement.description}
               </p>
-              
+
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           </motion.div>

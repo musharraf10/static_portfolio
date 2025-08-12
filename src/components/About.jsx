@@ -17,12 +17,12 @@ function About() {
     {
       icon: Rocket,
       title: 'Performance Focused',
-      description: 'Building fast, scalable, and responsive applications'
+      description: 'I have capability of Building fast, scalable, and responsive applications'
     },
     {
       icon: Users,
       title: 'Team Leadership',
-      description: 'Experience training and mentoring junior developers'
+      description: 'I have Experience for training and mentoring my juniors in web development'
     }
   ];
 
@@ -40,9 +40,12 @@ function About() {
         </h2>
         <div className="max-w-3xl mx-auto">
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-            I'm Shaik Musharaf, a passionate full-stack developer with expertise in MERN stack, 
-            AI prompt engineering, and modern web technologies. I specialize in creating 
-            innovative digital solutions that combine cutting-edge technology with exceptional user experiences.
+            Hi, I’m Musharaf. I recently finished my B.Tech in Information Technology in 2024.
+            I love building websites and apps using the MERN stack (MongoDB, Express, React, and Node.js)
+            and have experience with data structures and algorithms (DSA) in Java and I have knowledge on Python.
+            I have created projects like a study productivity app, a blogging platform, a video call app, and other web apps.
+            I enjoy learning new technologies in software development and want to use my skills to build useful and smart solutions.
+            I am excited to start my career and work on challenging projects.
           </p>
         </div>
       </motion.div>
