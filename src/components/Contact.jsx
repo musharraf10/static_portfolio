@@ -26,8 +26,8 @@ function Contact() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 -',
-      href: 'tel:+911234567890',
+      value: '+91 00000000',
+      href: 'tel:+919182399196',
     },
     {
       icon: MapPin,
