@@ -99,7 +99,7 @@ function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={3}
+                    rows={6}
                     className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground resize-none"
                     placeholder="Tell me about your project or just say hello!"
                 />
