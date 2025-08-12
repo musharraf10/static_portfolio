@@ -16,17 +16,22 @@ function ContactForm() {
         e.preventDefault();
         setIsSending(true);
 
+        const dataToSend = {
+            ...formData,
+            time: new Date().toLocaleString()
+        };
+
         emailjs
             .send(
                 "service_sil0da9",
                 "template_n39hhzb",
-                formData,
+                dataToSend,
                 "gSsKD6hSXE00-lic4"
             )
             .then(() => {
                 setStatus("Message sent successfully!");
                 setIsSending(false);
-                setFormData({ name: "", email: "", message: "" });
+                setFormData({ name: "", email: "", message: "", time: "" });
             })
             .catch((error) => {
                 console.error("EmailJS Error:", error);
@@ -34,6 +39,7 @@ function ContactForm() {
                 setIsSending(false);
             });
     };
+
 
     const handleChange = (e) => {
         setFormData({
