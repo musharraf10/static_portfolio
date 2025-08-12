@@ -18,10 +18,10 @@ function Hero() {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-16">
+    <section className="min-h-screen w-full flex flex-col justify-center items-center text-center relative overflow-hidden pt-16 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20"></div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4">
+      <div className="relative z-10 w-full max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -50,15 +50,15 @@ function Hero() {
           transition={{ duration: 1, delay: 0.4 }}
           className="mb-8"
         >
-          <p className="text-xl md:text-3xl text-muted-foreground mb-4">
+          <p className="text-lg sm:text-xl md:text-3xl text-muted-foreground mb-4">
             Full-stack Developer
           </p>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             AI & Prompt Engineer | MERN Stack Specialist | Creating Digital Experiences
           </p>
         </motion.div>
 
-        <animated.div style={fadeIn} className="flex justify-center space-x-6 mb-12">
+        <animated.div style={fadeIn} className="flex justify-center space-x-4 sm:space-x-6 mb-12">
           {socialLinks.map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}
@@ -67,9 +67,9 @@ function Hero() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="p-3 rounded-full bg-accent/20 hover:bg-accent/40 transition-all duration-300 group"
+              className="p-2 sm:p-3 rounded-full bg-accent/20 hover:bg-accent/40 transition-all duration-300 group"
             >
-              <Icon className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
+              <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-foreground group-hover:text-primary transition-colors" />
             </motion.a>
           ))}
         </animated.div>
@@ -78,13 +78,13 @@ function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center px-4"
         >
           <motion.a
             href="#projects"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
           >
             View My Work
           </motion.a>
@@ -92,7 +92,7 @@ function Hero() {
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-center"
           >
             Get In Touch
           </motion.a>
