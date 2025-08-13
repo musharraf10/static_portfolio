@@ -59,30 +59,33 @@ function Projects() {
                 ))}
               </div>
 
-              <div className="flex space-x-4">
+              <div className="flex space-x-8 sm:space-x-4">
                 <motion.a
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300"
+                  className="flex items-center space-x-1.5 sm:space-x-2 px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   <span>Live Demo</span>
                 </motion.a>
+
                 <motion.a
                   href={project.codeLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-4 py-2 border border-border text-foreground rounded-lg hover:bg-accent transition-all duration-300"
+                  className="flex items-center space-x-1.5 sm:space-x-2 px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base border border-border text-foreground rounded-lg hover:bg-accent transition-all duration-300"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   <span>Source Code</span>
                 </motion.a>
               </div>
+
+
             </div>
           </motion.div>
         ))}

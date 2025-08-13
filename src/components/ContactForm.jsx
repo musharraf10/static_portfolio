@@ -110,7 +110,7 @@ function ContactForm() {
                     required
                     rows={6}
                     className="w-full max-w-full px-3 py-2 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-card-foreground resize-none"
-                    placeholder="Tell me about your project or just say hello!"
+                    placeholder="Your message here..."
                 />
             </div>
 

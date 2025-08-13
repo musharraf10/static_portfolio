@@ -31,7 +31,7 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="w-full py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
+    <section id="skills" className="w-full py-20 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

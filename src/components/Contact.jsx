@@ -40,7 +40,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 px-4 bg-accent/5 w-full min-w-full box-border"
+      className="py-20 px-4 bg-accent/5 w-full min-w-full box-border"
     >
       <div className="w-full max-w-7xl mx-auto">
         <motion.div
@@ -50,7 +50,7 @@ function Contact() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Let's Connect & Learn Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -70,7 +70,7 @@ function Contact() {
             className="space-y-8 w-full"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-card-foreground">
+              <h3 className="text-xl font-bold mb-6 text-card-foreground">
                 Get In Touch
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8 text-base sm:text-lg">
@@ -115,7 +115,6 @@ function Contact() {
               ))}
             </div>
           </motion.div>
-
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}

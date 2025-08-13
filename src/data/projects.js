@@ -53,4 +53,12 @@ export const projects = [
     liveLink: "https://testsimongame.netlify.app/",
     codeLink: "https://github.com/musharraf10/SimonGame",
   },
+  {
+    title: "Portfolio Website",
+    description:
+      "A personal portfolio showcasing my projects, skills, and contact information.",
+    tech: ["React", "TailwindCSS", "Framer Motion"],
+    liveLink: "https://skmusharaf.netlify.app/",
+    codeLink: "https://github.com/musharraf10/static_portfolio",
+  },
 ];
