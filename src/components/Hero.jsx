@@ -18,7 +18,7 @@ function Hero() {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-16 px-4">
+    <section className="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden pt-4 px-4">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto w-full">
