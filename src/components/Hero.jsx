@@ -31,7 +31,7 @@ function Hero() {
           <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-secondary p-1">
             <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
               <img
-                src="/ProfilePhoto.jpg"
+                src="/NewProfileBG.png"
                 alt="Shaik Musharaf"
                 className="w-full h-full object-cover"
               />
