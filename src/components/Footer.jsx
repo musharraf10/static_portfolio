@@ -14,12 +14,10 @@ function Footer() {
           className="text-center"
         >
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <span className="text-muted-foreground">Made with</span>
-            <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-            <span className="text-muted-foreground">and</span>
-            <Code className="w-4 h-4 text-primary" />
-            <span className="text-muted-foreground">and lots of</span>
-            <Coffee className="w-4 h-4 text-amber-600" />
+            <span className="text-muted-foreground">
+              Made with care, focus, and a lot of learning along the way
+            </span>
+            <Heart className="w-4 h-4 text-red-500" />
           </div>
 
           <p className="text-muted-foreground mb-2">

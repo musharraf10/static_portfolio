@@ -40,7 +40,7 @@ function About() {
         </h2>
         <div className="max-w-3xl mx-auto">
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-            Hi, I’m Musharaf. I recently finished my B.Tech in Information Technology in 2024.
+            Hi, I’m Shaik Musharaf. I recently finished my B.Tech in Information Technology in 2024.
             I love building websites and apps using the MERN stack (MongoDB, Express, React, and Node.js)
             and have experience with data structures and algorithms (DSA) in Java and I have knowledge on Python.
             I have created projects like a study productivity app, a blogging platform, a video call app, and other web apps.
