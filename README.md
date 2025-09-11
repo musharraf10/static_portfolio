@@ -1,7 +1,7 @@
-# Shaik Musharaf – Developer Portfolio
+# Shaik Musharaf – Portfolio
 
 This is my personal portfolio website where I share my projects, skills, and achievements.  
-I built it to give recruiters, collaborators, and other developers a quick way to learn about me and the work I’ve done.
+I built it to give recruiters, collaborators, and other developers a quick way to learn about me and the work I've done.
 
 ## About the Project
 The portfolio is fully responsive, works on all devices, and has a clean, modern look.  
@@ -41,3 +41,7 @@ I’ve also added smaller projects and experiments I’ve worked on.
    ```bash
    npm run dev
    ```
+
+---
+I am making graphical concept for my portfilo, I will implement it as soon as possible.
+
