@@ -4,7 +4,7 @@ This is my personal portfolio website where I share my projects, skills, and ach
 I built it to give recruiters, collaborators, and other developers a quick way to learn about me and the work I've done.
 
 ## About the Project
-The portfolio is fully responsive, works on all devices, and has a clean, modern look.  
+The portfolio is fully responsive, works on all devices, and has a clean UI, modern look.  
 It includes smooth animations, theme switching, and sections for:
 - My introduction
 - Skills
@@ -44,4 +44,5 @@ I’ve also added smaller projects and experiments I’ve worked on.
 
 ---
 I am making graphical concept for my portfilo, I will implement it as soon as possible.
+
 
