@@ -29,7 +29,7 @@ I’ve also added smaller projects and experiments I’ve worked on.
    ```bash
    git clone https://github.com/musharraf10/static_portfolio
    cd portfolio
-````
+```
 
 2. Install dependencies
 
@@ -44,5 +44,6 @@ I’ve also added smaller projects and experiments I’ve worked on.
 
 ---
 I am making graphical concept for my portfilo, I will implement it as soon as possible.
+
 
 
