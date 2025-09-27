@@ -21,7 +21,7 @@ function Footer() {
           </div>
 
           <p className="text-muted-foreground mb-2">
-            © {new Date().getFullYear()} Shaik Musharaf. All rights reserved.
+            © Shaik Musharaf
           </p>
 
           <p className="text-sm text-muted-foreground">
