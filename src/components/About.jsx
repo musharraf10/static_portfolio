@@ -6,7 +6,7 @@ function About() {
   const features = [
     {
       icon: Code,
-      title: 'Full-Stack Development',
+      title: 'Backend Developer',
       description: 'Expertise in MERN stack with modern web technologies'
     },
     {
