@@ -7,7 +7,7 @@ function Skills() {
     {
       title: 'Frontend',
       skills: skills.filter(skill =>
-        ['JavaScript', 'TypeScript', 'ReactJS', 'TailwindCSS', 'Framer Motion'].includes(skill)
+        ['JavaScript', 'TypeScript', 'ReactJS'].includes(skill)
       )
     },
     {
