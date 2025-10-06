@@ -51,10 +51,10 @@ function Hero() {
           className="mb-8"
         >
           <p className="text-lg sm:text-xl md:text-3xl text-muted-foreground mb-4">
-            Full-stack Developer
+            Backend Developer
           </p>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-            AI & Prompt Engineer | MERN Stack Specialist | Creating Digital Experiences
+            AI & Prompt Engineer | MERN Stack Developer | Creating Digital Experiences
           </p>
         </motion.div>
 
